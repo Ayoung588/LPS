@@ -1,0 +1,409 @@
+/* General layout */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Concert One", sans-serif;
+  background-color: white;
+  color: black;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 1280px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo */
+.logo {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+}
+
+/* Navigation bar */
+.nav-bar {
+  display: flex;
+  justify-content: center;
+  background-color: #ffccff;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 25px;
+}
+
+.nav-bar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-bar a {
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  background-color: #ff99cc;
+}
+
+/* Hover animation and glow effect */
+.nav-bar a:hover {
+  background-color: #ff66b2;
+  color: white;
+  box-shadow: 0 0 10px #ff99cc, 0 0 20px #ff66b2;
+}
+
+/* Dark mode */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: white;
+}
+
+body.dark-mode .nav-bar {
+  background-color: #663366;
+}
+
+body.dark-mode .nav-bar a {
+  background-color: #ff99cc;
+  color: white;
+}
+
+body.dark-mode .nav-bar a:hover {
+  background-color: #ff66b2;
+}
+
+/* Dark mode toggle button */
+.dark-mode-toggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #ff99cc;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.dark-mode-toggle:hover {
+  background-color: #ff66b2;
+  color: white;
+}
+
+/* About section */
+.about-section {
+  background-color: #ffccff;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  text-align: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.about-section h2,
+.about-section h3 {
+  color: #ff66b2;
+}
+
+.about-section p {
+  color: black;
+}
+
+.about-section input {
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px solid #ff66b2;
+}
+
+.about-section button {
+  padding: 10px 20px;
+  background-color: #ff66b2;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.about-section button:hover {
+  background-color: #ff3399;
+}
+
+/* Dark mode styles for About section */
+body.dark-mode .about-section {
+  background-color: #3b3b3b;
+  color: white;
+}
+
+body.dark-mode .about-section h2,
+body.dark-mode .about-section h3 {
+  color: #ff99cc;
+}
+
+body.dark-mode .about-section p {
+  color: #e0e0e0;
+}
+
+body.dark-mode .about-section input {
+  border: 2px solid #ff99cc;
+}
+
+body.dark-mode .about-section button {
+  background-color: #ff99cc;
+}
+
+body.dark-mode .about-section button:hover {
+  background-color: #ff66b2;
+}
+
+/*product section*/
+.products-section {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.product-display {
+  background-color: #ffe6f2;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.product-display img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+
+.product-display h3 {
+  color: #d14791;
+  margin: 10px 0;
+  padding: 10px;
+  display: inline-block;
+  background-color: #ffb6c1;
+  border-radius: 20px;
+}
+
+.product-display p {
+  color: #6d134c;
+  font-size: 16px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.product-controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-controls button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px; 
+}
+
+.product-controls button:hover {
+  background-color: #ff1493;
+}
+
+.product-controls button:focus {
+  outline: none;
+  box-shadow: 0 0 10px #ff69b4;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .products-section {
+  background-color: #1c1c1c;
+  color: #ffffff;
+}
+
+body.dark-mode .product-display {
+  background-color: #2a2a2a;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .product-display h3 {
+  color: #ffb6c1;
+  background-color: #3a3a3a;
+}
+
+body.dark-mode .product-display p {
+  color: #ffffff;
+}
+
+body.dark-mode .product-controls button {
+  background-color: #ff69b4;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode .product-controls button:hover {
+  background-color: #ff1493;
+}
+
+/* Contact Section Styles */
+.contact-section {
+  padding: 20px;
+  background-color: #ffe6f2;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  color: #d14791;
+  text-align: center;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  color: #6d134c;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #d14791;
+  border-radius: 10px;
+  font-size: 16px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.contact-preference {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+}
+
+.contact-preference label {
+  flex: 1;
+  text-align: center;
+}
+
+button {
+  background-color: #ff69b4;
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #ff1493;
+}
+
+.error {
+  color: #ff1493;
+  font-size: 12px;
+}
+
+.thank-you-message {
+  margin-top: 20px;
+  color: #6d134c;
+  font-weight: bold;
+}
+label:after {
+
+  color: #ff1493;
+  font-weight: bold;
+}
+
+
+/* Dark Mode Styles */
+.dark-mode .contact-section {
+  background-color: #2c2c2c;
+  color: #e0e0e0;
+  box-shadow: none;
+  border: none;
+}
+
+.dark-mode .contact-section h2 {
+  color: #ffb6c1;
+}
+
+.dark-mode .contact-form {
+  border: none;
+}
+
+.dark-mode input, 
+.dark-mode textarea {
+  background-color: #3c3c3c;
+  color: #e0e0e0;
+  border: 1px solid #ffb6c1;
+}
+
+.dark-mode .contact-preference label {
+  color: #ffb6c1;
+}
+
+.dark-mode button {
+  background-color: #ff69b4;
+  color: white;
+}
+
+.dark-mode button:hover {
+  background-color: #ff1493;
+}
+
+.dark-mode .error {
+  color: #ff6f91;
+}
+
+/* Footer */
+footer {
+    background-color: #ff77a8;
+    color: #6d134c;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+    border-top: 2px solid #ff69b4;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    max-width: 600px;
+    margin: 0 auto;
+}

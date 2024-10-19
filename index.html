@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - GIT417 FINAL</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <title>Littlest Pet Shop</title>
+</head>
+<body>
+  <!-- Dark mode toggle -->
+  <button class="dark-mode-toggle" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+ 
+  <div class="container">
+    <!-- Logo -->
+<!--logo is sourced from here! https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Littlest_Pet_Shop_%282012_TV_series%29_logo.png/1200px-Littlest_Pet_Shop_%282012_TV_series%29_logo.png-->
+    <header>
+      <img src="logo.png" alt="Littlest Pet Shop Logo" class="logo">
+
+      <!-- Navigation -->
+      <nav class="nav-bar">
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    <section id="about" class="about-section">
+      <h2>About Littlest Pet Shop</h2>
+      <p>
+        A popular toy brand and animated series with a vast array of beautiful critters is called Littlest Pet Shop (LPS). 
+Every pet has a distinct personality and charm that make them ideal friends for pretend play. 
+Fans are inspired to write their own tales and go on their own adventures with these adorable creatures by the LPS universe, 
+which promotes camaraderie and creativity. There is a Littlest Pet Shop pet for everyone to adore, 
+regardless of your preference for dogs, cats, rabbits, or exotic animals!
+      </p>
+      
+      <h3 id="playToWin" style="text-align: center; color: #ff66b2;">
+        Play to Win a Discount!
+      </h3>
+      
+      <p>
+        Guess a number between 1 and 10 to see if you can win a discount on your next Littlest Pet Shop purchase!
+      </p>
+      
+      <div>
+        <input type="number" id="userGuess" min="1" max="10" placeholder="Enter a number (1-10)" required>
+        <button onclick="checkGuess()">Submit Guess</button>
+        <p id="resultMessage" style="font-weight: bold;"></p>
+      </div>
+    </section>
+
+    <!-- Products section -->
+    <section id="products" class="products-section">
+      <h2>Products</h2>
+
+      <div class="product-container">
+        <div id="productDisplay" class="product-display">
+          <img id="productImage" src="lps_cat.png" alt="Product 1">
+          <h3 id="productName">Short Hair #468</h3> 
+          <p id="productDescription">
+            One of the most popular cats brought to you by LPS! Now in restock!
+          </p>
+
+          <div class="product-controls">
+            <button onclick="showProduct(0)">Product 1</button>
+            <button onclick="showProduct(1)">Product 2</button>
+            <button onclick="showProduct(2)">Product 3</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Contact Us</h2>
+      <form class="contact-form" id="contactForm" onsubmit="return validateForm()">
+        <div class="form-group">
+          <label for="fullName">Full Name *</label>
+          <input type="text" id="fullName" name="fullName" required />
+          <span class="error" id="fullNameError"></span>
+        </div>
+        
+        <div class="form-group">
+          <label for="phoneNumber">Phone Number *</label>
+          <input type="tel" id="phoneNumber" name="phoneNumber" required />
+          <span class="error" id="phoneError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required />
+          <span class="error" id="emailError"></span>
+        </div>
+
+        <div class="form-group">
+          <label for="comments">Comments *</label>
+          <textarea id="comments" name="comments" required></textarea>
+          <span class="error" id="commentsError"></span>
+        </div>
+
+        <fieldset class="contact-preference">
+          <legend>How would you like to be contacted? *</legend>
+          <label>
+            <input type="radio" name="contactMethod" value="phone" required />
+            Phone
+          </label>
+          <label>
+            <input type="radio" name="contactMethod" value="email" required />
+            Email
+          </label>
+          <span class="error" id="contactMethodError"></span>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+      </form>
+      <div class="thank-you-message" id="thankYouMessage"></div>
+    </section>
+
+    <footer>
+      <p>Copyright © 2024 - Aaliyah Young</p>
+      <div class="footer-info">
+        <p>Littlest Pet Shop</p>
+        <p>1234 Playful Lane</p>
+        <p>Fun City, CA 90210</p>
+        <p>Phone: (555) 123-4567</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
